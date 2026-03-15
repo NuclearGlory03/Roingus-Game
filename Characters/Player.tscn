@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://ewjqcywaba1i" path="res://Scripts/CamControlChar.gd" id="1_t8hoq"]
 [ext_resource type="Texture2D" uid="uid://b24v2ccircr4a" path="res://Placeholders/MagiCrystal.png" id="2_oo13o"]
+[ext_resource type="Script" uid="uid://o8di5vyyvffu" path="res://Scripts/PrintCrystalAmount.gd" id="3_1ju47"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oo13o"]
 texture = ExtResource("2_oo13o")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ynroq"]
+font_size = 480
 
 [node name="Player" type="CharacterBody2D" unique_id=1372272007]
 script = ExtResource("1_t8hoq")
@@ -18,3 +22,14 @@ offset_top = -3066.0
 offset_right = -4781.0
 offset_bottom = -2301.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_oo13o")
+
+[node name="Label" type="Label" parent="Camera2D/Panel" unique_id=2084420558]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 32.0
+offset_right = 2824.0
+offset_bottom = 737.0
+label_settings = SubResource("LabelSettings_ynroq")
+script = ExtResource("3_1ju47")
+
+[connection signal="gems2" from="." to="Camera2D/Panel/Label" method="_on_player_gems_2"]

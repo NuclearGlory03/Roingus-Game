@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bumvkmj75x45q"
-path="res://.godot/imported/TileFloor.png-8a63695c082e8126ed1fae2f26f6150f.ctex"
+uid="uid://comsm7d8xjxkf"
+path="res://.godot/imported/FirePlaceholder.png-213e8ff195a889a19c60a35f95f204e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/TileFloor.png"
-dest_files=["res://.godot/imported/TileFloor.png-8a63695c082e8126ed1fae2f26f6150f.ctex"]
+source_file="res://Placeholders/FirePlaceholder.png"
+dest_files=["res://.godot/imported/FirePlaceholder.png-213e8ff195a889a19c60a35f95f204e4.ctex"]
 
 [params]
 

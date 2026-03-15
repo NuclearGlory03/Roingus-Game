@@ -2,28 +2,30 @@ extends CharacterBody2D
 
 
 const SPEED = 3000.0
-const MouseSpeed = 50
-const zoomFactor = 0.01
+const MouseSpeed = 100
+##const zoomFactor = 0.01
 var isPressed = false
 var lastMouseX
 var lastMouseY
+signal gems2
 
-func _process(delta: float) -> void:
-	pass
-
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var directionLR := Input.get_axis("left", "right")
 	if directionLR:
 		velocity.x = directionLR * SPEED
+		if Input.is_action_pressed("shift") :
+			velocity.x = directionLR * SPEED * 3
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 	var directionUD := Input.get_axis("up", "down")
 	if directionUD:
 		velocity.y = directionUD * SPEED
+		if Input.is_action_pressed("shift") :
+			velocity.y = directionUD * SPEED * 3
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	
@@ -42,12 +44,12 @@ func _input(event):
 			isPressed = false
 			
 		
-		if event.button_index == 4:
-			$Camera2D.zoom.x += zoomFactor
-			$Camera2D.zoom.y += zoomFactor
-		elif event.button_index == 5:
-			$Camera2D.zoom.x -= zoomFactor
-			$Camera2D.zoom.y -= zoomFactor
+		##if event.button_index == 4:
+			##$Camera2D.zoom.x += zoomFactor
+			##$Camera2D.zoom.y += zoomFactor
+		##elif event.button_index == 5:
+			##$Camera2D.zoom.x -= zoomFactor
+			##$Camera2D.zoom.y -= zoomFactor
 		
 	
 	if event is InputEventMouseMotion :
@@ -58,3 +60,8 @@ func _input(event):
 		position.y += (lastMouseY - event.position.y) * MouseSpeed * $Camera2D.zoom.y
 		lastMouseX = event.position.x
 		lastMouseY = event.position.y
+
+
+func _on_game_gems(gemCount) -> void:
+	emit_signal('gems2', gemCount)
+	pass # Replace with function body.
