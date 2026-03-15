@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dhd2bjgai6d1f"]
+
+[ext_resource type="Script" uid="uid://ewjqcywaba1i" path="res://Scripts/CamControlChar.gd" id="1_t8hoq"]
+[ext_resource type="Texture2D" uid="uid://b24v2ccircr4a" path="res://Placeholders/MagiCrystal.png" id="2_oo13o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oo13o"]
+texture = ExtResource("2_oo13o")
+
+[node name="Player" type="CharacterBody2D" unique_id=1372272007]
+script = ExtResource("1_t8hoq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1241245794]
+zoom = Vector2(0.1, 0.1)
+
+[node name="Panel" type="Panel" parent="Camera2D" unique_id=743238656]
+offset_left = -5515.0
+offset_top = -3066.0
+offset_right = -4781.0
+offset_bottom = -2301.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_oo13o")
