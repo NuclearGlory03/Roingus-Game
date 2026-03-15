@@ -2,14 +2,11 @@ extends CharacterBody2D
 
 
 const SPEED = 3000.0
-const MouseSpeed = 50
+const MouseSpeed = 100
 const zoomFactor = 0.01
 var isPressed = false
 var lastMouseX
 var lastMouseY
-
-func _process(delta: float) -> void:
-	pass
 
 func _physics_process(delta: float) -> void:
 
