@@ -30,8 +30,6 @@ debug_enabled = true
 debug_use_custom = true
 debug_path_custom_point_size = 50.0
 
-[node name="InvisTimer" type="Timer" parent="." unique_id=983321796]
-
 [node name="Sprite2DFull" type="Sprite2D" parent="." unique_id=1353670861]
 visible = false
 texture = ExtResource("4_g67gc")

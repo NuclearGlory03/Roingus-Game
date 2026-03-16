@@ -44,16 +44,13 @@ func _input(event):
 			isPressed = false
 			
 		
-		##if event.button_index == 4:
-			##$Camera2D.zoom.x += zoomFactor
-			##$Camera2D.zoom.y += zoomFactor
-		##elif event.button_index == 5:
-			##$Camera2D.zoom.x -= zoomFactor
-			##$Camera2D.zoom.y -= zoomFactor
+		#if event.button_index == 4:
+			#$Camera2D.zoom.x += zoomFactor
+			#$Camera2D.zoom.y += zoomFactor
+		#elif event.button_index == 5:
+			#$Camera2D.zoom.x -= zoomFactor
+			#$Camera2D.zoom.y -= zoomFactor
 		
-	
-	if event is InputEventMouseMotion :
-		event.relative
 	
 	if event is InputEventMouseMotion && isPressed:
 		position.x += (lastMouseX - event.position.x) * MouseSpeed * $Camera2D.zoom.x
