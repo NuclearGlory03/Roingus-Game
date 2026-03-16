@@ -22,7 +22,7 @@ tile_set = ExtResource("2_2fw7k")
 position = Vector2(1560, 2184)
 
 [node name="RoingusCivilian" type="Sprite2D" parent="." unique_id=229898552]
-position = Vector2(3795, 1350)
+position = Vector2(7824, 1176)
 texture = ExtResource("4_t7uon")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="RoingusCivilian" unique_id=1632614480]
