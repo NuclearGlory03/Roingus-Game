@@ -22,7 +22,6 @@ func _physics_process(_delta: float) -> void:
 		await get_tree().create_timer(1).timeout
 		$Sprite2DFull.visible = true
 		movementPaused = false
-		
 	
 	elif nav_agent.target_position == get_parent().get_child(4).global_position && !movementPaused:
 		$Sprite2DFull.visible = false

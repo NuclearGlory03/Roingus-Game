@@ -29,6 +29,7 @@ offset_left = 873.0
 offset_top = 32.0
 offset_right = 2824.0
 offset_bottom = 737.0
+text = "0"
 label_settings = SubResource("LabelSettings_ynroq")
 script = ExtResource("3_1ju47")
 
